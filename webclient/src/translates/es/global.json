@@ -1,0 +1,19 @@
+{
+    "header": {
+        "hello-world": "Hola Mundo",
+        "link-home": "Inicio",
+        "link-about": "Acerca de"
+    },
+    "login": {
+        "signin": "Inicio de sesión",
+        "login": "Iniciar sesión",
+        "username": "Usuario",
+        "password": "Contraseña",
+        "app-descr": "App legal para creación de propuestas",
+        "copyright": "Derechos reservados"
+    },
+    "menu": {
+        "about": "Acerca de"
+    }
+
+}

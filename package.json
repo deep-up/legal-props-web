@@ -1,0 +1,32 @@
+{
+  "name": "legalprops",
+  "version": "1.0.0",
+  "description": "legalprops app by deepUp",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server -r esm\" \"npm run webclient\"",
+    "server": "nodemon server/index.js --exec babel-node --presets node6",
+    "webclient": "npm start --prefix webclient",
+    "start": "node server",
+    "build": "babel src -d dst",
+    "heroku-postbuild": "cd webclient && npm install && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Wilmer Rodriguez - Deep Up",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-node6": "^11.0.0",
+    "babel-register": "^6.26.0",
+    "concurrently": "^6.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.5.0",
+    "graphql-tools": "^7.0.4",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.7"
+  }
+}

@@ -1,0 +1,21 @@
+.imageBig {
+    background: url(https://source.unsplash.com/featured/?laptop);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: max-content;
+    height: 100vh;
+}
+
+.appTitle {
+    font-size: 3em;
+}
+.appTitle > sup {
+    font-size: 0.35em;
+}
+
+.appDesc {
+    font-size: 1.5em;
+}
+
+
