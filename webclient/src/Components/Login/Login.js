@@ -37,18 +37,13 @@ function Login() {
           </Row>
           <Row className="justify-content-sm-center">
             <Col xs="auto" >
-              <Image src="https://img.freepik.com/psd-gratis/cerrar-maqueta-logo-tela-blanca_49421-147.jpg?size=626&ext=jpg" width="300px" height="200px" alt="logo" />
+              <Image src="https://img.freepik.com/psd-gratis/cerrar-maqueta-logo-tela-blanca_49421-147.jpg?size=626&ext=jpg" width="200px" height="150px" alt="logo" />
             </Col>
           </Row>
 
           <Row className="justify-content-sm-center p-3">
             <Col xs="auto">
               <div className="appTitle">LegalProps <sup>V0.1</sup></div>
-            </Col>
-          </Row>
-          <Row className="justify-content-sm-center p-3">
-            <Col xs="auto">
-              <div className="appDesc">{t("login.app-descr")}</div>
             </Col>
           </Row>
           <Row className="justify-content-sm-center p-3">
