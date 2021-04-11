@@ -1,8 +1,8 @@
 import React from 'react';
-import Login from '../Components/Login/Login';
-import Home from '../Components/Home/Home';
-import About from '../Components/About/About';
-import NoMatch from '../Components/NoMatch';
+import Login from '../cmponents/Login/Login';
+import Home from '../cmponents/Home/Home';
+import About from '../cmponents/About/About';
+import NoMatch from '../cmponents/NoMatch';
 import { Route, Switch } from "react-router-dom";
 
 
