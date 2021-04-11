@@ -6,10 +6,11 @@ import { ShieldLockFill, PersonFill, KeyFill } from 'react-bootstrap-icons';
 import { authCall } from '../../calls/Auth';
 import sha512 from "js-sha512";
 import { showSuccessAlert, showErrorAlert} from "../../utils/Alerts"
-import Store from "./redux/Stor";
+import Store from "../../redux/Store";
 
 
 function Login() {
+  const store = useStore();
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
