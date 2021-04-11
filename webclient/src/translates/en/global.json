@@ -10,7 +10,15 @@
         "username": "Username",
         "password": "Password",
         "app-descr": "Legal app to create proposals",
-        "copyright": "Copyright"
+        "copyright": "Copyright",
+        "noPassword": "Password required",
+        "noUsername": "Username required",
+        "auth": {
+            "successTitle": "Authentication Success",
+            "success": "Authentication Success",
+            "failTitle": "Authenticacion Failed",
+            "fail": "Wrong username or password"
+        }
     },
     "menu": {
         "about": "About"

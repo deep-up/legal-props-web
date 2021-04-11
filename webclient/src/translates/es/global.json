@@ -10,7 +10,15 @@
         "username": "Usuario",
         "password": "Contraseña",
         "app-descr": "App legal para creación de propuestas",
-        "copyright": "Derechos reservados"
+        "copyright": "Derechos reservados",
+        "noPassword": "Se requiere la contraseña",
+        "noUsername": "El usuario no puede estar vacio",
+        "auth": {
+            "successTitle": "Autenticación Exitosa",
+            "success": "Autenticacion Exitosa",
+            "failTitle": "Autenticacion Fallida",
+            "fail": "Usuario o clave incorrectos"
+        }
     },
     "menu": {
         "about": "Acerca de"
