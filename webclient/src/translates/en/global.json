@@ -1,4 +1,5 @@
 {
+    "loading": "Loading",
     "header": {
         "hello-world": "Hello world",
         "link-home": "Home",
@@ -7,20 +8,26 @@
     "login": {
         "signin": "Sign in",
         "login": "Sign in",
-        "username": "Username",
+        "email": "Email",
         "password": "Password",
         "app-descr": "Legal app to create proposals",
         "copyright": "Copyright",
         "noPassword": "Password required",
-        "noUsername": "Username required",
+        "noEmail": "Email required",
         "auth": {
             "successTitle": "Authentication Success",
             "success": "Authentication Success",
             "failTitle": "Authenticacion Failed",
-            "fail": "Wrong username or password"
+            "fail": "Wrong email or password"
         }
     },
     "menu": {
         "about": "About"
+    },
+    "user":{
+        "create":{
+            "success":"User Created Succefully",
+            "exist":"User already exist"
+        }
     }
 }

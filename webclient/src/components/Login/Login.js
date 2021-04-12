@@ -3,64 +3,28 @@ import { Container, Row, Col, Breadcrumb, Image, InputGroup, FormControl, Button
 import { useTranslation } from "react-i18next";
 import "./Login.scss";
 import { ShieldLockFill, PersonFill, KeyFill } from 'react-bootstrap-icons';
-import { authCall } from '../../calls/Auth';
-import sha512 from "js-sha512";
-import { showSuccessAlert, showErrorAlert} from "../../utils/Alerts"
-import Store from "../../redux/Store";
+import { useSelector, useDispatch } from "react-redux";
+import UtilsContainer from '../common/UtilsContainer';
+import { auth } from '../../redux/actions';
 
 
 function Login() {
-  const store = useStore();
+  const dispatch = useDispatch();
+  const authState = useSelector((Store) => Store.authReducer);
 
-  const [username, setUsername] = useState("");
+
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [t, i18n] = useTranslation("global");
-    const [alert, setAlert] = useState("");
-  const clearAlert = ()=>{
-    setAlert("<div></div>");
+
+  function authInitiator() {
+    dispatch(auth({ email, password }));
   }
-
-
-  function Auth() {
-    function encrypt() {
-      return new Promise((resolve, reject) => {
-        if (username.length === 0) {
-          reject(new Error('login.noUsername'));
-        }
-        if (password.length === 0) {
-          reject(new Error('login.noPassword'));
-        }
-        const encrypted = sha512.update(password);
-        resolve(encrypted);
-      });
-    };
-
-    encrypt()
-      .then((encrypted) => {
-        setPassword(encrypted);
-        authCall(username, encrypted, (data)=>{
-          const auth = data.data.auth;
-          console.log({authres:auth});
-          if (auth.success){
-            console.log("success");
-            setAlert( showSuccessAlert(t(auth.message),t(auth.message),clearAlert,1000) );
-          }else{
-            console.log("fail");
-            setAlert( showErrorAlert(t(auth.message),t(auth.message),clearAlert) );
-          }
-        });
-        setPassword("");
-        
-      })
-      .catch((error) => {
-        setAlert( showErrorAlert(t("login.auth.failTitle"),t(error.message),clearAlert) );
-      });
-  }
-
 
   return (
     <Container fluid>
-      {alert}
+      <UtilsContainer></UtilsContainer>
+      <div>{authState.token}</div>
       <Row>
         <Col className="imageBig d-none d-md-block" sm={0} md={4} lg={7} ></Col>
         <Col sm={12} md={8} lg={5}>
@@ -69,7 +33,7 @@ function Login() {
               <Row className="float-right">
                 <Col>
                   <Breadcrumb>
-                    <Breadcrumb.Item  onClick={() => { i18n.changeLanguage("en") }} >English
+                    <Breadcrumb.Item onClick={() => { i18n.changeLanguage("en") }} >English
                     </Breadcrumb.Item>
                     <Breadcrumb.Item onClick={() => { i18n.changeLanguage("es") }}>Español
                     </Breadcrumb.Item>
@@ -106,7 +70,7 @@ function Login() {
                 <InputGroup.Prepend>
                   <InputGroup.Text id="basic-addon1"><PersonFill /></InputGroup.Text>
                 </InputGroup.Prepend>
-                <FormControl id="secusername" placeholder={t("login.username")} value={username} onChange={e => setUsername(e.target.value)} />
+                <FormControl id="secEmail" placeholder={t("login.email")} value={email} onChange={e => setEmail(e.target.value)} />
               </InputGroup>
             </Col>
           </Row>
@@ -124,7 +88,7 @@ function Login() {
 
           <Row className="justify-content-sm-center p-2">
             <Col >
-              <Button variant="primary" type="submit" size="lg" block onClick={Auth}>{t("login.login")}</Button>
+              <Button variant="primary" type="submit" size="lg" block onClick={authInitiator}>{t("login.login")}</Button>
             </Col>
           </Row>
           <Row className="justify-content-sm-center p-2">

@@ -8,24 +8,40 @@ const typeDefs = gql`
         users:[User]
     }
     type Mutation{
-        auth(input:UserAuthInput):Response!
-        createUser(input:UserAuthInput):Response!
+        createUser(input:UserInput):Response!
     }
     type Response {
         success: Boolean!
         message:String!
         token: String
+        _id:ID
     }
 
     type User{
         _id:ID
-        username:String!
+        email:String!
         password:String!
+        name:String,
+        roles:[Role],
+        createdAt:String
+        updatedAt:String
+        createdAtISO:String
+        updatedAtISO:String
     }
-    input UserAuthInput{
-        username:String!
+    type Role{
+        _id:ID
+        name: String!
+    }
+    input UserInput{
+        email:String!
         password:String!
+        name: String
+        roles:[RoleInput]
     }
+    input RoleInput{
+        name: String!
+    }
+    
 `;
 
 export const UsersSchema = makeExecutableSchema({

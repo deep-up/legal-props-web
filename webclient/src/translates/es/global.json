@@ -1,4 +1,5 @@
 {
+    "loading": "Cargando",
     "header": {
         "hello-world": "Hola Mundo",
         "link-home": "Inicio",
@@ -7,12 +8,12 @@
     "login": {
         "signin": "Inicio de sesión",
         "login": "Iniciar sesión",
-        "username": "Usuario",
+        "email": "Correo",
         "password": "Contraseña",
         "app-descr": "App legal para creación de propuestas",
         "copyright": "Derechos reservados",
         "noPassword": "Se requiere la contraseña",
-        "noUsername": "El usuario no puede estar vacio",
+        "noEmail": "El correo no puede estar vacio",
         "auth": {
             "successTitle": "Autenticación Exitosa",
             "success": "Autenticacion Exitosa",
@@ -22,6 +23,13 @@
     },
     "menu": {
         "about": "Acerca de"
+    },
+    "user":{
+        "create":{
+            "success":"usuario creado correctamente",
+            "exist":"el usuario ya existe"
+        }
     }
+
 
 }
