@@ -31,6 +31,7 @@
     "mongoose": "^5.12.3",
     "morgan": "^1.10.0",
     "nodemon": "^2.0.7",
+    "react-modern-drawer": "^0.1.0",
     "ws": "^7.4.4"
   }
 }

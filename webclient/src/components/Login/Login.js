@@ -15,7 +15,7 @@ function Login() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [t, i18n] = useTranslation("global");
+  const [t] = useTranslation("global");
 
   function authInitiator() {
     dispatch(auth({ email, password }));

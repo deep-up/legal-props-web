@@ -1,12 +1,10 @@
 import React from 'react'
-import { useHistory } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import { Breadcrumb } from 'react-bootstrap';
 
 
 function BreadcrumpLang() {
-    const [t, i18n] = useTranslation("global");
-    const history = useHistory();
+    const [i18n] = useTranslation("global");
 
 
     return (

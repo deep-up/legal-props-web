@@ -1,7 +1,8 @@
 import axios from 'axios';
 
 export async function authCall(email, password, resp, reject) {
-     await axios({
+  console.log(process.env.REACT_APP_URL_AUTH_USERS);
+     axios({
       url: process.env.REACT_APP_URL_AUTH_USERS,
       method: 'post',
       data: {

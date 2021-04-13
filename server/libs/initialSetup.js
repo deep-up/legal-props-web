@@ -25,7 +25,7 @@ module.exports.createRoles =  async () => {
         if (!(userfoundcam)) {
             const valuesusercam = await Promise.all([
                 userController.createUserController({ email:"camilo@deep-up.com", roles:[{name:"user"},{name:"admin"}], name: "Camilo Rojas", password:"dc2cfd10b04e66285a89a7856bccb7de133fb0130b266ac23fc0b38a7ac2709ff37f80501c2fb452e6f5ab12cc8173d707a2a92735d371d13399a0dcacd6f5fa" })
-            ]);//deepUpCam
+            ]);
             console.log(valuesusercam);
         }
 
