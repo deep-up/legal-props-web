@@ -1,6 +1,6 @@
 import React from 'react';
 import Login from '../components/Login/Login';
-import Home from '../components/Home/Home';
+import Dashboard from '../components/Dashboard/Dashboard';
 import About from '../components/About/About';
 import NoMatch from '../components/NoMatch';
 import { Redirect, Route, Switch } from "react-router-dom";
@@ -14,9 +14,8 @@ function Routes() {
     return (
         <Switch>
             <Route path="/about" component={About} />
-            <Route exact path="/login" component={Login} />
             <Route exact path="/dashboard">
-                {token ? <Home />: <Redirect to="/" /> }
+                {token ? <Dashboard />: <Redirect to="/" /> }
             </Route>
 
             <Route exact path="/">

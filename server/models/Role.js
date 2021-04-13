@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose =require ( "mongoose");
 
 const roleSchema = new mongoose.Schema({
     name: {
@@ -10,4 +10,4 @@ const roleSchema = new mongoose.Schema({
     versionKey: false
 });
 
-export default mongoose.model("Role", roleSchema);
+module.exports = mongoose.model("Role", roleSchema);

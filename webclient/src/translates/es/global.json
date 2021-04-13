@@ -1,5 +1,6 @@
 {
     "loading": "Cargando",
+    "signout":"Cerrar sesión",
     "header": {
         "hello-world": "Hola Mundo",
         "link-home": "Inicio",

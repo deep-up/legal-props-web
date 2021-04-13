@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="210mm"
+   viewBox="0 0 210 210"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2-2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="legalpropsLogo.svg">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="335.15739"
+     inkscape:cy="577.03257"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:snap-page="true" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       sodipodi:type="star"
+       style="fill:#76b58b;fill-opacity:1;stroke:#76b58b;stroke-width:16.5066;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="path849"
+       sodipodi:sides="4"
+       sodipodi:cx="89.645996"
+       sodipodi:cy="82.365425"
+       sodipodi:r1="29.70557"
+       sodipodi:r2="30.728441"
+       sodipodi:arg1="-0.37722872"
+       sodipodi:arg2="0.40816948"
+       inkscape:flatsided="true"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="M 117.26294,71.423513 100.58791,109.98237 62.029054,93.307337 78.704084,54.748483 Z"
+       transform="matrix(2.0759385,2.0950681,-2.0926355,2.0829873,91.358543,-254.33295)" />
+    <rect
+       style="fill:#538083;fill-opacity:1;stroke:none;stroke-width:10.9855;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect996"
+       width="143.46912"
+       height="141.21976"
+       x="33.362762"
+       y="34.437759"
+       ry="19.825155" />
+    <g
+       id="g989"
+       transform="matrix(5.2177536,0,0,5.2296413,-329.10657,-202.07518)"
+       style="fill:#ffffff;stroke:#ffffff;stroke-width:0.8;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:22.5561px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.8;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="73.75544"
+         y="66.754768"
+         id="text979"
+         transform="scale(0.99706662,1.002942)"><tspan
+           sodipodi:role="line"
+           id="tspan977"
+           x="73.75544"
+           y="66.754768"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.8;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">L</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:22.5561px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.8;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         x="78.03463"
+         y="66.754768"
+         id="text983"
+         transform="scale(0.99706662,1.002942)"><tspan
+           sodipodi:role="line"
+           id="tspan981"
+           x="78.03463"
+           y="66.754768"
+           style="fill:#ffffff;fill-opacity:1;stroke:#ffffff;stroke-width:0.8;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">P</tspan></text>
+    </g>
+  </g>
+</svg>

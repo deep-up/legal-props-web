@@ -1,10 +1,10 @@
-import jwt from "jsonwebtoken";
-import User from "../../models/User.js";
+const jwt =require( "jsonwebtoken");
+const User =require( "../../models/User.js");
 
 
 
 
-export const AuthResolvers = {
+module.exports.AuthResolvers = {
     Query: {
         hello: () => {
             return "Hello world from graphQL"

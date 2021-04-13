@@ -1,6 +1,6 @@
-import { makeExecutableSchema } from "graphql-tools";
-import { UsersResolvers } from "./UsersResolvers.js";
-import gql from 'graphql-tag';
+const graphqlTools = require ("graphql-tools");
+const usersResolvers  = require ( "./UsersResolvers.js");
+const gql  = require ( 'graphql-tag');
 
 const typeDefs = gql`
     type Query{
@@ -44,7 +44,7 @@ const typeDefs = gql`
     
 `;
 
-export const UsersSchema = makeExecutableSchema({
+module.exports.UsersSchema = graphqlTools.makeExecutableSchema({
     typeDefs: typeDefs,
-    resolvers: UsersResolvers
+    resolvers: usersResolvers.UsersResolvers
 });

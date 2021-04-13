@@ -1,16 +1,20 @@
-import mongoose from "mongoose" ;
+const mongoose = require("mongoose");
+const dotenv = require('dotenv');
+dotenv.config();
 
-export async function connect (){
-    try{
-        await mongoose.connect('mongodb://localhost:27017/deepup', {
-            useNewUrlParser:true,
+;
+
+module.exports.connect =  async function() {
+    try {
+        await mongoose.connect(process.env.DB, {
+            useNewUrlParser: true,
             useUnifiedTopology: true,
-            useFindAndModify:true,
-            useCreateIndex:true
+            useFindAndModify: true,
+            useCreateIndex: true
         });
         console.log(">>> mongoDB is connected");
-    
-    }catch (e){
+
+    } catch (e) {
         console.log(e);
     }
 }

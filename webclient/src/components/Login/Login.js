@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Breadcrumb, Image, InputGroup, FormControl, Button, Card } from "react-bootstrap";
+import { Container, Row, Col, Image, InputGroup, FormControl, Button, Card } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import "./Login.scss";
 import { ShieldLockFill, PersonFill, KeyFill } from 'react-bootstrap-icons';
@@ -23,7 +23,7 @@ function Login() {
 
   return (
     <Container fluid>
-      <UtilsContainer></UtilsContainer>
+
       <div>{authState.token}</div>
       <Row>
         <Col className="imageBig d-none d-md-block" sm={0} md={4} lg={7} ></Col>
@@ -32,21 +32,14 @@ function Login() {
             <Col>
               <Row className="float-right">
                 <Col>
-                  <Breadcrumb>
-                    <Breadcrumb.Item onClick={() => { i18n.changeLanguage("en") }} >English
-                    </Breadcrumb.Item>
-                    <Breadcrumb.Item onClick={() => { i18n.changeLanguage("es") }}>Español
-                    </Breadcrumb.Item>
-                    <Breadcrumb.Item href="/about">{t("menu.about")}
-                    </Breadcrumb.Item>
-                  </Breadcrumb>
+                  <UtilsContainer></UtilsContainer>
                 </Col>
               </Row>
             </Col>
           </Row>
           <Row className="justify-content-sm-center">
             <Col xs="auto" >
-              <Image src="https://img.freepik.com/psd-gratis/cerrar-maqueta-logo-tela-blanca_49421-147.jpg?size=626&ext=jpg" width="200px" height="150px" alt="logo" />
+              <Image src={process.env.PUBLIC_URL + '/img/legalpropsLogo.svg'} width="200px" height="200px" alt="logo" />
             </Col>
           </Row>
 

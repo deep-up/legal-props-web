@@ -1,12 +1,12 @@
-import { Router } from "express";
-import graphqlHTTP from 'express-graphql';
-import {AuthSchema} from '../graphql/auth/AuthSchema.js';
+const express = require ( "express");
+const graphqlHTTP =  require ( 'express-graphql');
+const authSchema = require ( '../graphql/auth/AuthSchema.js');
 
-const router = Router();
+const router = express.Router();
 
 router.use("/auth", graphqlHTTP.graphqlHTTP({
-    schema: AuthSchema,
+    schema: authSchema.AuthSchema,
     graphiql: true
 }));
 
-export default router;
+module.exports = router;

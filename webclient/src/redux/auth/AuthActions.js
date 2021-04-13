@@ -1,8 +1,8 @@
 import { authCall } from '../../calls/Auth';
 import { encrypt } from '../../utils/crypt';
 import { validateLoginForm } from '../../utils/validations';
-import { loadingTrue, setAlert } from '../actions';
-import { AUTH_SUCCESS, AUTH_FAILURE } from './AuthTypes';
+import { loadingTrue, setAlert, clearAlert } from '../actions';
+import { AUTH_SUCCESS, AUTH_FAILURE, LOGOUT } from './AuthTypes';
 
 export const authSuccess = (token) => ({
   type: AUTH_SUCCESS,
@@ -14,6 +14,19 @@ export const authSuccess = (token) => ({
 export const authFailure = () => ({
   type: AUTH_FAILURE
 });
+
+export const logout = () => ({
+  type: LOGOUT
+});
+
+
+export const logoutSession = () => {
+  return (dispatch) => {
+    dispatch(clearAlert());
+    dispatch(logout());
+  }
+
+}
 
 export const auth = (loginData) => {
   return (dispatch) => {

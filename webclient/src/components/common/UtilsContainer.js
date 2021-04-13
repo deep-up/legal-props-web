@@ -2,6 +2,7 @@ import React from 'react'
 import Loading from './Loading';
 import { useSelector } from "react-redux";
 import Alerts from "./Alerts"
+import BreadcrumpLang from './BreadcrumpLang';
 
 
 function UtilsContainer(props) {
@@ -10,6 +11,8 @@ function UtilsContainer(props) {
     return (
         <React.Fragment>
             <div className="utilsBar">
+                <BreadcrumpLang></BreadcrumpLang>
+
             </div>
             <Loading/>
             <div>{(alert.show === true) ? <Alerts/>: ""}</div>

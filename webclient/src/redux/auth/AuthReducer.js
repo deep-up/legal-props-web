@@ -1,5 +1,5 @@
 
-import { AUTH_FAILURE, AUTH_SUCCESS } from "./AuthTypes";
+import { AUTH_FAILURE, AUTH_SUCCESS, LOGOUT } from "./AuthTypes";
 
 
 const initialState = {
@@ -16,8 +16,12 @@ const AuthReducer = (state = initialState, action) => {
         case AUTH_FAILURE: return {
             ...state,
             token: null
-
         }
+        case LOGOUT: return {
+            ...state,
+            token: null
+        }
+        
 
         default:
             return state

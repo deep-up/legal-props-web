@@ -1,6 +1,6 @@
-import { makeExecutableSchema } from "graphql-tools";
-import { AuthResolvers } from "./AuthResolvers.js";
-import gql from 'graphql-tag';
+const graphqlTools = require( "graphql-tools");
+const authResolvers = require( "./AuthResolvers.js");
+const gql = require( 'graphql-tag');
 
 const typeDefs = gql`
     type Query{
@@ -23,7 +23,7 @@ const typeDefs = gql`
     
 `;
 
-export const AuthSchema = makeExecutableSchema({
+module.exports.AuthSchema = graphqlTools.makeExecutableSchema({
     typeDefs: typeDefs,
-    resolvers: AuthResolvers
+    resolvers: authResolvers.AuthResolvers
 });
