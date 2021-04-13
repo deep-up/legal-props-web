@@ -4,11 +4,11 @@
   "description": "legalprops app by deepUp",
   "main": "index.js",
   "scripts": {
+    "start":"node server",
     "dev": "concurrently \"npm run server -r esm\" \"npm run webclient\"",
     "server": "nodemon server/index.js",
     "webclient": "npm start --prefix webclient",
     "build": "npm run clean && npm server -d dst",
-    "start":"node server/index.js",
     "heroku-postbuild": "cd webclient && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
