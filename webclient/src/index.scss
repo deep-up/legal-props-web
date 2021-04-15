@@ -1,7 +1,10 @@
+$primary-col: #00b37d;
+
+
 /* make the customizations */
 $theme-colors: (
     "info": tomato,
-    "primary": #00b37d
+    "primary": $primary-col
 );
 $dropdown-min-width: 1rem;
 @import "node_modules/bootstrap/scss/bootstrap";
@@ -36,9 +39,17 @@ code {
   text-align: center;
 }
 
-.userDropdown{
-  right: 0;
-}
+/*sidebar colors*/
+$sidebar-bg-color: #f8f9fa;
+$sidebar-color: #666;
+$submenu-bg-color:#e7e8e9;
+$submenu-bg-color-collapsed:#e7e8e9;
+$highlight-color: $primary;
+$icon-bg-color: $primary-col;
+$sidebar-collapsed-width: 0px !default;
+$sidebar-width: 270px !default;
+
+@import '~react-pro-sidebar/dist/scss/styles.scss';
 
 
 /* The following block can be included in a custom.scss */

@@ -23,7 +23,8 @@
         }
     },
     "menu": {
-        "about": "Acerca de"
+        "about": "Acerca de",
+        "header":"Menú"
     },
     "user":{
         "create":{

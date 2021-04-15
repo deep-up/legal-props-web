@@ -23,7 +23,8 @@
         }
     },
     "menu": {
-        "about": "About"
+        "about": "About",
+        "header":"Menu"
     },
     "user":{
         "create":{
