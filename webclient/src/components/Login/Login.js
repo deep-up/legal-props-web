@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import "./Login.scss";
 import { ShieldLockFill, PersonFill, KeyFill } from 'react-bootstrap-icons';
 import { useSelector, useDispatch } from "react-redux";
-import UtilsContainer from '../common/UtilsContainer';
+import LoginUtilsContainer from '../common/LoginUtilsContainer';
 import { auth } from '../../redux/actions';
 
 
@@ -32,7 +32,7 @@ function Login() {
             <Col>
               <Row className="float-right">
                 <Col>
-                  <UtilsContainer></UtilsContainer>
+                  <LoginUtilsContainer></LoginUtilsContainer>
                 </Col>
               </Row>
             </Col>
@@ -45,7 +45,7 @@ function Login() {
 
           <Row className="justify-content-sm-center p-3">
             <Col xs="auto">
-              <div className="appTitle">LegalProps <sup>V0.1</sup></div>
+              <div className="appTitle"><Image src={process.env.PUBLIC_URL + '/img/legalprops.svg'} width="200px" alt="logo" /><sup>V0.1</sup></div>
             </Col>
           </Row>
           <Row className="justify-content-sm-center p-3">
@@ -53,7 +53,7 @@ function Login() {
               <h2><ShieldLockFill /></h2>
             </Col>
             <Col xs="auto">
-              <div className="appDesc">{t("login.signin")}</div>
+              <div className="title">{t("login.signin")}</div>
             </Col>
           </Row>
 
@@ -87,7 +87,7 @@ function Login() {
           <Row className="justify-content-sm-center p-2">
             <Col >
               <Card >
-                <Card.Body>{t("login.copyright")} &copy; 2021 - Powered by  <a href="https://www.deep-up.com" title="deep up">Deep-up</a> </Card.Body>
+                <Card.Body className="footerLogin">{t("login.copyright")} &copy; 2021 <a href="https://www.deep-up.com" title="deep up"><Image src={process.env.PUBLIC_URL + '/img/deepupLogoWhieTransp.svg'}  width="250px"/></a> </Card.Body>
               </Card>
             </Col>
           </Row>

@@ -1,6 +1,8 @@
-$primary-col: #00b37d;
-
-
+$primary-col: #2CD99B;
+$primary-text-col:#404040;
+$title-font-family: Georgia, serif;
+$text-font-family: Helvetica, serif;
+$font-family-sans-serif: $text-font-family;
 /* make the customizations */
 $theme-colors: (
     "info": tomato,
@@ -11,9 +13,7 @@ $dropdown-min-width: 1rem;
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, $text-font-family;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -51,8 +51,15 @@ $sidebar-width: 270px !default;
 
 @import '~react-pro-sidebar/dist/scss/styles.scss';
 
-
 /* The following block can be included in a custom.scss */
 
+.footerLogin{
+  color: $primary-text-col;
+}
+
+.title{
+  font-family: $title-font-family;
+  font-size: 2em;
+}
 
 

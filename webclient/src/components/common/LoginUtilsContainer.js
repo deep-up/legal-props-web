@@ -5,7 +5,7 @@ import Alerts from "./Alerts"
 import BreadcrumpLang from './BreadcrumpLang';
 
 
-function UtilsContainer(props) {
+function LoginUtilsContainer(props) {
     const alert = useSelector((Store) => Store.commonReducer.alert);
 
     return (
@@ -19,5 +19,5 @@ function UtilsContainer(props) {
         </React.Fragment>
     )
 }
-
-export default UtilsContainer
+ 
+export default LoginUtilsContainer

@@ -74,7 +74,7 @@ function Dashboard() {
                                 <Nav.Link href="#" onClick={toggleDrawer}  >
                                     <Justify style={{ fontSize: "2rem" }} /></Nav.Link>
                                 <Navbar.Brand href="#"  onClick={toggleDrawer}>
-                                    <Image src={process.env.PUBLIC_URL + '/img/legalpropsLogo.svg'} width="40px" height="40px" alt="logo" className="d-inline-block align-top" />LegalProps</Navbar.Brand>
+                                    <Image src={process.env.PUBLIC_URL + '/img/legalpropsLogo.svg'} width="40px" height="40px" alt="logo" className="d-inline-block align-top" /><Image src={process.env.PUBLIC_URL + '/img/legalprops.svg'} height="30px" alt="logo" className="d-inline-block align-middle" /></Navbar.Brand>
                                 <NavDropdown size="sm" title={<Globe />} id="basic-nav-dropdown">
                                     <NavDropdown.Item className="d-inline-block" href="#es" onClick={() => { i18n.changeLanguage("en") }}>
                                         <Flag country="US" />
