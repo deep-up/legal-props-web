@@ -6,6 +6,7 @@ const typeDefs = gql`
     type Query{
         hello:String!
         users:[User]
+        user(input:UserQueryInput):User
     }
     type Mutation{
         createUser(input:UserInput):Response!
@@ -37,6 +38,9 @@ const typeDefs = gql`
         password:String!
         name: String
         roles:[RoleInput]
+    }
+    input UserQueryInput{
+        _id:ID
     }
     input RoleInput{
         name: String!

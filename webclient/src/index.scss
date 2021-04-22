@@ -1,13 +1,13 @@
 $primary-col: #2CD99B;
 $primary-text-col:#404040;
-$title-font-family: Georgia, serif;
-$text-font-family: Helvetica, serif;
+$title-font-family: Georgia,
+serif;
+$text-font-family: Helvetica,
+serif;
 $font-family-sans-serif: $text-font-family;
 /* make the customizations */
-$theme-colors: (
-    "info": tomato,
-    "primary": $primary-col
-);
+$theme-colors: ("info": tomato,
+  "primary": $primary-col);
 $dropdown-min-width: 1rem;
 @import "node_modules/bootstrap/scss/bootstrap";
 
@@ -29,7 +29,7 @@ code {
 }
 
 
-.utilsBar{
+.utilsBar {
   position: relative;
   top: 0;
   right: 0;
@@ -40,26 +40,60 @@ code {
 }
 
 /*sidebar colors*/
-$sidebar-bg-color: #f8f9fa;
-$sidebar-color: #666;
-$submenu-bg-color:#e7e8e9;
-$submenu-bg-color-collapsed:#e7e8e9;
 $highlight-color: $primary;
 $icon-bg-color: $primary-col;
 $sidebar-collapsed-width: 0px !default;
 $sidebar-width: 270px !default;
-
+/*
 @import '~react-pro-sidebar/dist/scss/styles.scss';
-
+*/
 /* The following block can be included in a custom.scss */
 
-.footerLogin{
+.footerLogin {
   color: $primary-text-col;
+  background-color: #fafafa;
+  text-align: center;
 }
 
-.title{
+.title {
   font-family: $title-font-family;
   font-size: 2em;
 }
 
 
+.sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  margin-left: -250px;
+  transition: all 0.5s;
+  height: 100vh !important;
+  display: block !important;
+  z-index: 9;
+
+}
+
+.sidebar.is-open {
+  margin-left: 0;
+
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, .3);
+  display: none;
+  z-index: 8;
+}
+
+@media only screen and (max-width: 660px) {
+  .showOverlay {
+    display: block;
+  }
+  .sidebar {
+    position: absolute;
+    float: left;
+  }
+}

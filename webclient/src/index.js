@@ -11,13 +11,13 @@ import Store from "./redux/Store";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store = {Store}>
-    <I18nextProvider i18n={i18next}>
-        <BrowserRouter>
-          <Routes />
-        </BrowserRouter>
-    </I18nextProvider>
-    </Provider>
+      <Provider store={Store}>
+        <I18nextProvider i18n={i18next}>
+          <BrowserRouter>
+            <Routes />
+          </BrowserRouter>
+        </I18nextProvider>
+      </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
