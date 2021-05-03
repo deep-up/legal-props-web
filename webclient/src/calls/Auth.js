@@ -6,14 +6,7 @@ export async function authCall(email, password, resp, reject) {
       url: process.env.REACT_APP_URL_AUTH_USERS,
       method: 'post',
       data: {
-        query: `mutation {
-                    auth(input: {email: "${email}", password: "${password}"}) {
-                      success
-                      message
-                      token
-                      _id
-                    }
-                  }`
+        query: `mutation {auth(input: {email: "${email}", password: "${password}"}) {success,message,token,_id}}`
       }
     }).then(res => {
       //console.log(res.data);

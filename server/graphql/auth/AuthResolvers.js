@@ -26,8 +26,8 @@ module.exports.AuthResolvers = {
                 if (usr) {
                     console.log({ userauth: "success", email: usr.email });
                     // Create a token
-                    const token = jwt.sign({ id: usr._id }, process.env.SECRET, {
-                        expiresIn: 3600, // 1 hour
+                    const token = jwt.sign({ id: usr._id }, process.env.API_KEY, {
+                        expiresIn: '4h'
                     });
                     return {
                         success: true,

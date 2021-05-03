@@ -1,3 +1,4 @@
+const jwt =require( "jsonwebtoken");
 const express = require('express');
 const path = require('path');
 const cors = require("cors");
@@ -20,8 +21,38 @@ app.use(morgan("dev"));
 }));
 */
 
+const protectedRoute = express.Router(); 
+protectedRoute.use((req, res, next) => {
+    const token = req.headers['access-token'];
+ 
+    if (token) {
+      jwt.verify(token, process.env.API_KEY, (err, decoded) => {      
+        if (err) {
+            console.log(err);
+
+          return res.json({
+               success: false,
+               message: "auth.fail."+err.name,
+               _id: null
+                   });    
+        } else {
+            console.log(decoded);
+            req.decoded = decoded;  
+          next();
+        }
+      });
+    } else {
+      res.send({ 
+        success: false,
+        message: "auth.fail.notoken",
+        _id: null
+      });
+    }
+ });
+
+
 app.use("/graphql", authRouter);
-app.use("/graphql", usersRouter);
+app.use("/graphql", protectedRoute, usersRouter);
 
 //if (process.env.ENV === 'production') {
 console.log("Starting server in Production Mode");

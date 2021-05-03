@@ -6,7 +6,7 @@ const typeDefs = gql`
     type Query{
         hello:String!
         users:[User]
-        user(input:UserQueryInput):User
+        user(input:UserQueryInput):ResponseUser
     }
     type Mutation{
         createUser(input:UserInput):Response!
@@ -17,6 +17,12 @@ const typeDefs = gql`
         token: String
         _id:ID
     }
+    type ResponseUser {
+        success: Boolean!
+        message:String!
+        user:User
+    }
+
 
     type User{
         _id:ID
