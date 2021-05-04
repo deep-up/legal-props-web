@@ -32,7 +32,7 @@ protectedRoute.use((req, res, next) => {
 
           return res.json({
                success: false,
-               message: "auth.fail."+err.name,
+               message: "login.auth."+err.name,
                _id: null
                    });    
         } else {
@@ -44,7 +44,7 @@ protectedRoute.use((req, res, next) => {
     } else {
       res.send({ 
         success: false,
-        message: "auth.fail.notoken",
+        message: "login.auth.notoken",
         _id: null
       });
     }

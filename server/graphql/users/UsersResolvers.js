@@ -11,10 +11,11 @@ module.exports.UsersResolvers = {
         async user(_, { input }) {
             console.log(input._id);
             console.log("user request");
-            const foundUser = await User.findById(new mongoose.Types.ObjectId(input._id));
+            var foundUser = await User.findById(new mongoose.Types.ObjectId(input._id));
+            foundUser.password= " ";
             console.log(foundUser);
             if (foundUser) {
-                console.log("user found");
+                //console.log("user found");
                 return {
                     success: true,
                     message: "OK",

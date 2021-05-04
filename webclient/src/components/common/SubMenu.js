@@ -20,7 +20,7 @@ class SubMen extends React.Component {
   }
 
   render() {
-    const { icon, title, items } = this.props;
+    const { title, items } = this.props;
 
     return (
       <Nav.Item className={classNames({ open: !this.state.collapsed })}>

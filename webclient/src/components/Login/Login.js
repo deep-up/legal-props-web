@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Container, Row, Col, Image, InputGroup, FormControl, Button, Card } from "react-bootstrap";
+import { Container, Row, Col, Image, InputGroup, FormControl, Button } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import "./Login.scss";
 import { ShieldLockFill, PersonFill, KeyFill } from 'react-bootstrap-icons';
@@ -16,7 +16,6 @@ function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [t] = useTranslation("global");
-  var selectedTheme = "cerulean";
 
   function authInitiator() {
     dispatch(auth({ email, password }));

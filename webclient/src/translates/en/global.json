@@ -16,10 +16,14 @@
         "noPassword": "Password required",
         "noEmail": "Email required",
         "auth": {
-            "successTitle": "Authentication Success",
-            "success": "Authentication Success",
-            "failTitle": "Authenticacion Failed",
-            "fail": "Wrong email or password"
+            "successTitle": "Authentication success",
+            "success": "Authentication success",
+            "failTitle": "Authenticacion failed",
+            "fail": "Wrong email or password",
+            "TokenExpiredError":"Credentials expired, please login again",
+            "JsonWebTokenError":"Token Error",
+            "notoken":"Authenticacion required to access this resource"
+
         }
     },
     "menu": {

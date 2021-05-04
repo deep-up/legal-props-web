@@ -14,11 +14,11 @@ function Routes() {
     return (
         <Switch>
             <Route path="/about" component={About} />
-            <Route exact path="/dashboard">
+            <Route path="/dashboard">
                 {token ? <Dashboard />: <Redirect to="/" /> }
             </Route>
 
-            <Route exact path="/">
+            <Route path="/">
                 {token ? <Redirect to="/dashboard" /> :  <Login />}
             </Route>
             <Route component={NoMatch} />

@@ -1,34 +1,36 @@
 import React from 'react';
 import { Col, Container, Dropdown, DropdownButton, Image, Nav, Navbar, NavDropdown, Row } from 'react-bootstrap';
-import { useHistory } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import { DoorOpenFill, Globe, Justify, Person } from 'react-bootstrap-icons';
 import Flag from 'react-flagkit';
 import { useSelector, useDispatch } from "react-redux";
 import { clearAlert, logoutSession } from '../../redux/actions';
 import SideBar from '../common/Sidebar';
+import { Route, Switch, useParams } from "react-router-dom";
 
 
 
-function Dashboard() {
 
-    const [sidebarIsOpen, setSidebarIsOpen] = React.useState(false)
+
+function Dashboard(props) {
+    const dispatch = useDispatch();
+
+    const [sidebarIsOpen, setSidebarIsOpen] = React.useState(false);
+    const userData = useSelector((Store) => Store.userReducer.user);
     const toggleDrawer = () => {
         setSidebarIsOpen((prevState) => !prevState)
     }
 
     const [t, i18n] = useTranslation("global");
-    const history = useHistory();
-    const dispatch = useDispatch();
     dispatch(clearAlert());
+
     return (
         <React.Fragment>
             <Container className="p-0 justify-content-start ml-0 mw-100 ">
                 <Row className="m-0">
-                <Col xs="auto p-0" >
+                    <Col xs="auto p-0" >
                         <div className={"overlay " + (sidebarIsOpen ? " showOverlay" : "")} onClick={toggleDrawer} aria-label="overlay"></div>
                         <SideBar toggle={toggleDrawer} isOpen={sidebarIsOpen} />
-
                     </Col>
                     <Col className="p-0 w-100 content" >
                         <Navbar bg="light" className="w-100">
@@ -48,19 +50,36 @@ function Dashboard() {
                             </Nav>
 
                             <DropdownButton menuAlign="right" title={<Person />}>
-                                <Dropdown.Item href="#/action-1">UserData</Dropdown.Item>
-                                <Dropdown.Item href="#/action-2"></Dropdown.Item>
+                                <Dropdown.Item >{(userData ? userData.name : "noUserData")}</Dropdown.Item>
+                                <Dropdown.Item >{(userData ? userData.email : "noUserEmail")}</Dropdown.Item>
                                 <Dropdown.Item href="#" onClick={() => { dispatch(logoutSession()) }}><DoorOpenFill />{t("signout")}</Dropdown.Item>
                             </DropdownButton>
                         </Navbar>
+                        <Row>
+                            <Col>
+                                <Switch>
+                                    <Route>
+                                    <Route path="/dashboard/:id" children={<Child />} /> 
+                                    </Route>
+                                </Switch>
+                            </Col>
+                        </Row>
                     </Col>
                 </Row>
             </Container>
-            {/*<Drawer open={isOpen} onClose={toggleDrawer} direction='left'>
-                asdfsdfgsdfgsdfgsdfgsdfg sdfg asdfg sdflg ksdf sdfh sdfhsdfhsdfh sdfh sdfhsdfhsd f sdfhs dfhs dfsdfhsdfhsdfhs dhsdhjsdjdf df dfgj
-    </Drawer>*/}
         </React.Fragment>
     );
 }
+function Child() {
+    // We can use the `useParams` hook here to access
+    // the dynamic pieces of the URL.
+    let { id } = useParams();
+  
+    return (
+      <div>
+        <h3>ID: {id}</h3>
+      </div>
+    );
+  }
 
 export default Dashboard;

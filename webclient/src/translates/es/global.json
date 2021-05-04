@@ -19,7 +19,11 @@
             "successTitle": "Autenticación Exitosa",
             "success": "Autenticacion Exitosa",
             "failTitle": "Autenticacion Fallida",
-            "fail": "Usuario o clave incorrectos"
+            "fail": "Usuario o clave incorrectos",
+            "TokenExpiredError":"Credenciales expiradas, por favor inicie sesión de nuevo",
+            "JsonWebTokenError":"Error de token",
+            "notoken":"Authenticacion required to access this resource"
+
         }
     },
     "menu": {

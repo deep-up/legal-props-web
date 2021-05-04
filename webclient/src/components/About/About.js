@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Col, Container, Nav, Navbar, Row } from 'react-bootstrap';
-import SideBar from '../common/Sidebar';
+import { Col, Container,  Navbar, Row } from 'react-bootstrap';
 
 function About() {
     const [sidebarIsOpen, setSidebarOpen] = useState(true);

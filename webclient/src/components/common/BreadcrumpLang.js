@@ -4,7 +4,7 @@ import { Breadcrumb } from 'react-bootstrap';
 
 
 function BreadcrumpLang() {
-    const [t,i18n] = useTranslation("global");
+    const [i18n] = useTranslation("global");
 
 
     return (
