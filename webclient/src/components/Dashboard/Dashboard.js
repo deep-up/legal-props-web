@@ -4,13 +4,10 @@ import { useTranslation } from "react-i18next";
 import { DoorOpenFill, Globe, Justify, Person } from 'react-bootstrap-icons';
 import Flag from 'react-flagkit';
 import { useSelector, useDispatch } from "react-redux";
-import { clearAlert, logoutSession } from '../../redux/actions';
+import { clearAlert, logoutSession, setRoute } from '../../redux/actions';
 import SideBar from '../common/Sidebar';
 import { Route, Switch, useParams } from "react-router-dom";
-
-
-
-
+import EditProps from '../Props/EditProps';
 
 function Dashboard(props) {
     const dispatch = useDispatch();
@@ -55,8 +52,8 @@ function Dashboard(props) {
                                 <Dropdown.Item href="#" onClick={() => { dispatch(logoutSession()) }}><DoorOpenFill />{t("signout")}</Dropdown.Item>
                             </DropdownButton>
                         </Navbar>
-                        <Row>
-                            <Col>
+                        <Row className="m-0">
+                            <Col className="p-0">
                                 <Switch>
                                     <Route>
                                     <Route path="/dashboard/:id" children={<Child />} /> 
@@ -73,7 +70,13 @@ function Dashboard(props) {
 function Child() {
     // We can use the `useParams` hook here to access
     // the dynamic pieces of the URL.
+    const dispatch = useDispatch();
     let { id } = useParams();
+    dispatch(setRoute(id));
+
+    if (id==="propsEdit"){
+        return(<EditProps />);
+    }
   
     return (
       <div>

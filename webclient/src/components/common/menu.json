@@ -1,0 +1,24 @@
+{
+    "menu": [{
+            "text": "menu.props",
+            "route": "propsEdit",
+            "icon": "FileEarmarkRichtextFill"
+        },
+        {
+            "text": "menu.security",
+            "route": "SubMenu",
+            "icon": "ShieldLockFill",
+            "submenu": [{
+                    "text": "menu.users",
+                    "route": "users",
+                    "icon": "People"
+                },
+                {
+                    "text": "menu.roles",
+                    "route": "roles",
+                    "icon": "Collection"
+                }
+            ]
+        }
+    ]
+}

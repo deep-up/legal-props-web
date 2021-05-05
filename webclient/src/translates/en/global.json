@@ -28,7 +28,12 @@
     },
     "menu": {
         "about": "About",
-        "header":"Menu"
+        "header":"Menu",
+        "security":"Security",
+        "users":"Users",
+        "roles":"Roles",
+        "props":"LegalProps"
+
     },
     "user":{
         "create":{

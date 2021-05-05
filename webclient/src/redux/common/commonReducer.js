@@ -1,7 +1,8 @@
-import {CLEAR_ALERT,LOADING_FALSE,LOADING_TRUE,SET_ALERT } from "./commonTypes";
+import { CLEAR_ALERT, LOADING_FALSE, LOADING_TRUE, SET_ALERT, SET_ROUTE } from "./commonTypes";
 
 const initialState = {
     loading: false,
+    route: "/",
     alert: {
         show: false,
         typeinput: "",
@@ -16,18 +17,18 @@ const CommonReducer = (state = initialState, action) => {
         case LOADING_TRUE:
             return {
                 ...state,
-                loading:true
+                loading: true
             }
-            case LOADING_FALSE:
-                return {
-                    ...state,
-                    loading:true
-                }
-    
+        case LOADING_FALSE:
+            return {
+                ...state,
+                loading: true
+            }
+
         case SET_ALERT:
             return {
                 ...state,
-                loading:false,
+                loading: false,
                 alert: {
                     show: true,
                     typeinput: action.payload.typeinput,
@@ -48,7 +49,11 @@ const CommonReducer = (state = initialState, action) => {
                     timeout: 0
                 },
             }
-
+        case SET_ROUTE:
+            return {
+                ...state,
+                route: action.payload
+            }
 
         default:
             return state
