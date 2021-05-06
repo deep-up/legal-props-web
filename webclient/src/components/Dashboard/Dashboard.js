@@ -36,8 +36,7 @@ function Dashboard(props) {
                                 <Nav.Link href="#" onClick={toggleDrawer}  >
                                     <Justify style={{ fontSize: "2rem" }} /></Nav.Link>
                                 <Navbar.Brand href="#" onClick={toggleDrawer}>
-
-                                    <Image src={process.env.PUBLIC_URL + '/img/legalpropsLogo.svg'} width="40px" height="40px" alt="logo" className="d-inline-block align-top" /><Image src={process.env.PUBLIC_URL + '/img/legalprops.svg'} height="30px" alt="logo" className="d-inline-block align-middle" /></Navbar.Brand>
+                                    <Image src={process.env.PUBLIC_URL + '/img/legalpropsLog.svg'} width="40px" height="40px" alt="logo" className="d-inline-block align-top" /><Image src={process.env.PUBLIC_URL + '/img/legalprops.svg'} height="30px" alt="logo" className="d-inline-block align-middle" /></Navbar.Brand>
                                 <NavDropdown size="xs" title={<Globe />} id="basic-nav-dropdown">
                                     <NavDropdown.Item className="d-inline-block" href="#es" onClick={() => { i18n.changeLanguage("en") }}>
                                         <Flag country="US" />
@@ -56,7 +55,7 @@ function Dashboard(props) {
                             <Col className="p-0">
                                 <Switch>
                                     <Route>
-                                    <Route path="/dashboard/:id" children={<Child />} /> 
+                                        <Route path="/dashboard/:id" children={<Child />} />
                                     </Route>
                                 </Switch>
                             </Col>
@@ -74,15 +73,15 @@ function Child() {
     let { id } = useParams();
     dispatch(setRoute(id));
 
-    if (id==="propsEdit"){
-        return(<EditProps />);
+    if (id === "propsEdit") {
+        return (<EditProps />);
     }
-  
+
     return (
-      <div>
-        <h3>ID: {id}</h3>
-      </div>
+        <div>
+            <h3>ID: {id}</h3>
+        </div>
     );
-  }
+}
 
 export default Dashboard;
