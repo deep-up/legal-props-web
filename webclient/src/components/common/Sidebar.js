@@ -54,7 +54,7 @@ function SideBar(props) {
                         eventKey="0"
                         onClick={toggleNavbar}
                     >{icon} {t(menuItem.text)}
-                        {collapsed ? <Icons.CaretDownFill /> : <Icons.CaretUpFill />}
+                        {!collapsed ? <Icons.CaretDownFill /> : <Icons.CaretUpFill />}
                     </Accordion.Toggle>
                     <Accordion.Collapse eventKey="0">
                         <nav className="nav flex-column pl-4">
