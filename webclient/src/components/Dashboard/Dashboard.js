@@ -8,6 +8,7 @@ import { clearAlert, logoutSession, setRoute } from '../../redux/actions';
 import SideBar from '../common/Sidebar';
 import { Route, Switch, useParams } from "react-router-dom";
 import EditProps from '../Props/EditProps';
+import ParamProposals from '../param/ParamProposals';
 
 function Dashboard(props) {
     const dispatch = useDispatch();
@@ -73,9 +74,15 @@ function Child() {
     let { id } = useParams();
     dispatch(setRoute(id));
 
-    if (id === "propsEdit") {
-        return (<EditProps />);
+    switch (id){
+        case "propsEdit": 
+            return (<EditProps />);
+            case "paramproposal": 
+            return (<ParamProposals />);
+        
+    
     }
+    
 
     return (
         <div>

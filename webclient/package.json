@@ -19,6 +19,7 @@
     "react-bootstrap": "^1.5.2",
     "react-bootstrap-icons": "^1.4.0",
     "react-bootstrap-sweetalert": "^5.2.0",
+    "react-bootstrap-table-next": "^1.1.0",
     "react-dom": "^16.14.0",
     "react-flagkit": "^2.0.4",
     "react-i18next": "^11.8.11",
@@ -31,6 +32,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "spectacle": "^6.2.0",
+    "underscore": "^1.13.1",
     "web-vitals": "^1.1.1"
   },
   "scripts": {

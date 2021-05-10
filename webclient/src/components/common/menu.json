@@ -5,6 +5,23 @@
             "icon": "FileEarmarkRichtextFill"
         },
         {
+            "text": "menu.param.props",
+            "route": "SubMenu",
+            "icon": "GearFill",
+            "submenu": [{
+                    "text": "menu.param.props",
+                    "route": "paramproposal",
+                    "icon": "FileRichtextFill"
+                },
+                {
+                    "text": "menu.param.groups",
+                    "route": "paramgroups",
+                    "icon": "PeopleFill"
+                }
+            ]
+        },
+
+        {
             "text": "menu.security",
             "route": "SubMenu",
             "icon": "ShieldLockFill",

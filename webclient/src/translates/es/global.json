@@ -32,7 +32,12 @@
         "security":"Seguridad",
         "users":"Usuarios",
         "roles":"Roles",
-        "props":"LegalProps"
+        "props":"LegalProps",
+        "param": {
+            "props": "Propuestas",
+            "groups": "Grupos"
+        }
+
     },
     "user":{
         "create":{

@@ -1,6 +1,6 @@
 {
     "loading": "Loading",
-    "signout":"Signout",
+    "signout": "Signout",
     "header": {
         "hello-world": "Hello world",
         "link-home": "Home",
@@ -20,25 +20,30 @@
             "success": "Authentication success",
             "failTitle": "Authenticacion failed",
             "fail": "Wrong email or password",
-            "TokenExpiredError":"Credentials expired, please login again",
-            "JsonWebTokenError":"Token Error",
-            "notoken":"Authenticacion required to access this resource"
+            "TokenExpiredError": "Credentials expired, please login again",
+            "JsonWebTokenError": "Token Error",
+            "notoken": "Authenticacion required to access this resource"
 
         }
     },
     "menu": {
         "about": "About",
-        "header":"Menu",
-        "security":"Security",
-        "users":"Users",
-        "roles":"Roles",
-        "props":"LegalProps"
+        "header": "Menu",
+        "security": "Security",
+        "users": "Users",
+        "roles": "Roles",
+        "props": "LegalProps",
+        "param": {
+            "props": "Proposals",
+            "groups": "Groups"
+        }
+
 
     },
-    "user":{
-        "create":{
-            "success":"User Created Succefully",
-            "exist":"User already exist"
+    "user": {
+        "create": {
+            "success": "User Created Succefully",
+            "exist": "User already exist"
         }
     }
 }
