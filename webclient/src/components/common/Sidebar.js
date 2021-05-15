@@ -1,20 +1,21 @@
 import React, { useState } from "react";
 import { Accordion, Nav } from "react-bootstrap";
 import * as Icons from "react-bootstrap-icons";
-import { Link, useParams } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useHistory } from "react-router-dom";
+import { useSelector,useDispatch } from "react-redux";
 import { useTranslation } from "react-i18next";
 
 import menu from "./menu.json";
+import { toggleDrawer } from "../../redux/actions";
 
 
-function SideBar(props) {
+function SideBar() {
     const [t] = useTranslation("global");
     const routeData = useSelector((Store) => Store.commonReducer.route);
-    let { id } = useParams();
+    const drawerOpen = useSelector((Store) => Store.commonReducer.drawerOpen);
     return (
         <React.Fragment>
-            <div className={"sidebar bg-light " + (props.isOpen ? "is-open" : "")}>
+            <div className={"sidebar bg-light " + (drawerOpen ? "is-open" : "")}>
                 <Nav variant="pills" defaultActiveKey="/home" className="flex-column">
                     <div className="navbar-brand">{t("menu.header")}</div>
                     {Menu(routeData, menu.menu)}
@@ -24,7 +25,7 @@ function SideBar(props) {
         </React.Fragment>
     );
     function Menu(routeData, menu) {
-        console.log(menu);
+        //console.log(menu);
         return menu.map(function (menuitem, index) {
             const icon = React.createElement(Icons[menuitem.icon]);
             if (menuitem.route === "SubMenu") {
@@ -46,7 +47,7 @@ function SideBar(props) {
         }
 
         return (
-            <Nav.Item className={(!collapsed ? "open" : "")}>
+            <Nav.Item key={menuItem.text} className={(!collapsed ? "open" : "")}>
                 <Accordion>
                     <Accordion.Toggle
                         as={Nav.Link}
@@ -67,10 +68,17 @@ function SideBar(props) {
 
         );
     }
-    function MenuItem(routeData, menuitem, icon) {
+    function MenuItem(routeData, menuItem, icon) {
+        const dispatch = useDispatch();
+        const history = useHistory();
+        function openLink(link) {
+            dispatch(toggleDrawer());
+            history.push(link);
+        }
+
         return (
-            <Nav.Item>
-                <Link className={"nav-link " + (routeData === menuitem.route ? "active" : "")} to={"/dashboard/" + menuitem.route}>{icon} {t(menuitem.text)}</Link>
+            <Nav.Item key ={menuItem.route}>
+                <a className={"nav-link " + (routeData === menuItem.route ? "active" : "")} href={"#" + menuItem.route} onClick={()=>{openLink("/dashboard/" + menuItem.route)}}>{icon} {t(menuItem.text)}</a>
             </Nav.Item>
         );
     }

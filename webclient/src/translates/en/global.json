@@ -34,6 +34,7 @@
         "roles": "Roles",
         "props": "LegalProps",
         "param": {
+            "templates": "Templates",
             "props": "Proposals",
             "groups": "Groups"
         }
@@ -45,5 +46,11 @@
             "success": "User Created Succefully",
             "exist": "User already exist"
         }
+    },
+    "functions":{
+        "add":"Add"
+    },
+    "templates":{
+        "createNewTemplate":"Create new template"
     }
 }

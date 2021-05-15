@@ -1,8 +1,9 @@
-import { CLEAR_ALERT, LOADING_FALSE, LOADING_TRUE, SET_ALERT, SET_ROUTE } from "./commonTypes";
+import { CLEAR_ALERT, LOADING_FALSE, LOADING_TRUE, SET_ALERT, SET_ROUTE, TOGGLE_DRAWER } from "./commonTypes";
 
 const initialState = {
     loading: false,
     route: "/",
+    drawerOpen: true,
     alert: {
         show: false,
         typeinput: "",
@@ -41,6 +42,7 @@ const CommonReducer = (state = initialState, action) => {
         case CLEAR_ALERT:
             return {
                 ...state,
+                loading: false,
                 alert: {
                     show: false,
                     typeinput: "",
@@ -53,6 +55,11 @@ const CommonReducer = (state = initialState, action) => {
             return {
                 ...state,
                 route: action.payload
+            }
+        case TOGGLE_DRAWER:
+            return {
+                ...state,
+                drawerOpen: !state.drawerOpen
             }
 
         default:

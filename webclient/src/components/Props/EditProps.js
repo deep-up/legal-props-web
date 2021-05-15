@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 //import { Deck, Slide, Heading } from 'spectacle';
 import AlloyEditor from 'alloyeditor';
 

@@ -6,7 +6,7 @@ $text-font-family: Helvetica,
 serif;
 $font-family-sans-serif: $text-font-family;
 /* make the customizations */
-$theme-colors: ("info": tomato,
+$theme-colors: (
   "primary": $primary-col);
 $dropdown-min-width: 1rem;
 @import "node_modules/bootstrap/scss/bootstrap";

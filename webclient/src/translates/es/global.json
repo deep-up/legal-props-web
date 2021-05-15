@@ -34,6 +34,7 @@
         "roles":"Roles",
         "props":"LegalProps",
         "param": {
+            "templates": "Plantillas",
             "props": "Propuestas",
             "groups": "Grupos"
         }
@@ -44,7 +45,14 @@
             "success":"usuario creado correctamente",
             "exist":"el usuario ya existe"
         }
+    },
+    "functions":{
+        "add":"Agregar"
+    },
+    "templates":{
+        "createNewTemplate":"Crear nueva plantilla"
     }
+
 
 
 }

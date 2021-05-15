@@ -9,6 +9,11 @@
             "route": "SubMenu",
             "icon": "GearFill",
             "submenu": [{
+                    "text": "menu.param.templates",
+                    "route": "paramtemplates",
+                    "icon": "PencilSquare"
+                },
+                {
                     "text": "menu.param.props",
                     "route": "paramproposal",
                     "icon": "FileRichtextFill"
